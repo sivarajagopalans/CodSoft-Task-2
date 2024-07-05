@@ -12,7 +12,7 @@ const taskSlice = createSlice({
             const id = Math.random() * 100;
             let task = { ...action.payload, id };
             state.tasksList.push(task);
-        }
+        },
     }
 })
 
