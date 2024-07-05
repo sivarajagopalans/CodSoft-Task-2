@@ -1,15 +1,18 @@
 import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { useDispatch } from 'react-redux';
+import { addTaskToList } from '../slices/tasksSlices';
 
 export const AddTask = () => {
 
     const [title, setTitle] = useState('');
+    const dispatch = useDispatch();
 
     const addTask = (e) => {
         e.preventDefault();
-        // setTitle(title);
         console.log({ title });
+        dispatch(addTaskToList({ title }));
         setTitle("");
     }
     return (
