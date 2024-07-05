@@ -14,7 +14,7 @@ export const TasksList = () => {
         console.log("task deleted");
 
     }
-    const submitEdit=()=>{
+    const submitEdit = () => {
         setEditTask(false);
     }
     return (
@@ -31,9 +31,9 @@ export const TasksList = () => {
                     <tr>
                         <td>1</td>
                         {editTask ? <td>
-                            <Form.Control className='edit-input' type="text" style={{width:"70px",display:"inline",border:"none",outline:"none",background:"transparent"}} />
+                            <Form.Control className='edit-input' type="text" style={{ width: "70px", display: "inline", border: "none", outline: "none", background: "transparent" }} />
                             <Button variant="secondary" className='m-2'
-                            onClick={() => submitEdit()} type="submit"><i className='bi bi-check-lg'></i>
+                                onClick={() => submitEdit()} type="submit"><i className='bi bi-check-lg'></i>
                             </Button></td> : <td>wakeup</td>}
                         <td >
                             <Button className='m-1' variant="secondary" type="submit"

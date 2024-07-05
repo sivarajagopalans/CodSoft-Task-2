@@ -3,13 +3,14 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 export const AddTask = () => {
-    
+
     const [title, setTitle] = useState('');
 
-    const addTask=(e)=>{
+    const addTask = (e) => {
         e.preventDefault();
         // setTitle(title);
-        console.log({title});
+        console.log({ title });
+        setTitle("");
     }
     return (
         <>
@@ -20,7 +21,7 @@ export const AddTask = () => {
                         onChange={(e) => setTitle(e.target.value)} placeholder="Enter Task Title" />
                 </Form.Group>
                 <div className='text-end mt-5'>
-                    <Button variant="primary" type="submit" onClick={(e)=>addTask(e)}>
+                    <Button variant="primary" type="submit" onClick={(e) => addTask(e)}>
                         Add Task
                     </Button>
                 </div>
