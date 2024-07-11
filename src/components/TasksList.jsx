@@ -1,7 +1,8 @@
 import { Table, Button } from 'react-bootstrap'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { removeTaskFromList, setSeletedTask } from '../slices/tasksSlices';
 import { UpdateTask } from './UpdateTask';
+import { useState } from 'react';
 
 
 export const TasksList = () => {
