@@ -20,11 +20,11 @@ const taskSlice = createSlice({
         },
         updateTaskInList: (state, action) => {
             state.tasksList = state.tasksList.map((task) => {
-                return task.id === action.payload.id ? action.payload.id : task;
+                return task.id === action.payload.id ? action.payload : task;
             })
         },
         setSeletedTask: (state, action) => {
-            return state.selectedTask = action.payload;
+            state.selectedTask = action.payload;
         }
     }
 })
