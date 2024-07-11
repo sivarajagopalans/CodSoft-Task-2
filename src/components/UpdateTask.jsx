@@ -16,11 +16,12 @@ export const UpdateTask = (props) => {
     const dispatch = useDispatch();
 
 
-    const submitEdit = () => {
-        props.onHide()
+    const submitEdit = (e) => {
+        e.preventDefault();
+        props.onHide();
         dispatch(updateTaskInList({ id, title }));
-        console.log({ id, title });   
-        console.log("task updated");      
+        console.log({ id, title });
+        console.log("task updated");
     }
 
     useEffect(() => {
@@ -55,7 +56,7 @@ export const UpdateTask = (props) => {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="primary" type="submit"
-                        onClick={()=>submitEdit()}>
+                        onClick={(e) => submitEdit(e)}>
                         update
                     </Button>
                 </Modal.Footer>
