@@ -11,3 +11,11 @@
   outline: none;
   background: transparent;
 }
+
+body {
+  background-image: url(/src/assets/back.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
