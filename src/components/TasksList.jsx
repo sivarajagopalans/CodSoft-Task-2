@@ -1,4 +1,4 @@
-import { Table, Button } from 'react-bootstrap'
+import { Table, Button, Form } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux';
 import { removeTaskFromList, setSeletedTask } from '../slices/tasksSlices';
 import { UpdateTask } from './UpdateTask';
@@ -42,6 +42,12 @@ export const TasksList = () => {
                                     <td>{index + 1}</td>
                                     <td>{task.title}</td>
                                     <td>
+                                        <Form>
+                                            <div>
+                                                <Form.Check style={{display:"inline"}} type='switch' id='custom-switch' />
+                                                <span>&nbsp; &nbsp; Completed</span>
+                                            </div>
+                                        </Form><br />
                                         <Button className='m-1' variant="secondary" type="submit"
                                             onClick={() => updateTask(task)}>
                                             <i className='bi bi-pencil-square'></i>
