@@ -19,7 +19,7 @@ export const AddTask = () => {
         <>
             <Form className="my-5">
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label className='h3 mb-4'>Task Title</Form.Label>
+                    <Form.Label className='h3 mb-4 text-black'>Task Title</Form.Label>
                     <Form.Control type="text" value={title}
                         onChange={(e) => setTitle(e.target.value)} placeholder="Enter Task Title" />
                 </Form.Group>
