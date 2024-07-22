@@ -29,9 +29,9 @@ export const TasksList = () => {
             <Table striped bordered hover>
                 <thead className='text-center align-middle'>
                     <tr>
-                        <th style={{width:"140px"}}>Task Number</th>
+                        <th style={{ width: "140px" }}>Task Number</th>
                         <th>Task Name</th>
-                        <th style={{width:"160px"}}>Actions</th>
+                        <th style={{ width: "160px" }}>Actions</th>
                     </tr>
                 </thead>
                 <tbody className='text-center align-middle'>
@@ -39,12 +39,12 @@ export const TasksList = () => {
                         tasksList && tasksList.map((task, index) => {
                             return (
                                 <tr key={task.id}>
-                                    <td style={{width:"140px"}}>{index + 1}</td>
-                                    <td style={{wordBreak:"break-word"}}>{task.title}</td>
-                                    <td style={{width:"160px"}}>
+                                    <td style={{ width: "140px" }}>{index + 1}</td>
+                                    <td style={{ wordBreak: "break-word" }}>{task.title}</td>
+                                    <td style={{ width: "160px" }}>
                                         <Form>
                                             <div>
-                                                <Form.Check style={{display:"inline"}} type='switch' id='custom-switch' />
+                                                <Form.Check style={{ display: "inline" }} type='switch' id='custom-switch' />
                                                 <span>&nbsp; &nbsp; Completed</span>
                                             </div>
                                         </Form><br />
